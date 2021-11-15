@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Paper, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "with valid attributes" do
+    paper = FactoryBot.create :paper
+    it "should have an author" do
+      expect(paper.authors).to_not be_empty
+    end
+  end
 end
