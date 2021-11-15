@@ -19,6 +19,8 @@ RSpec.describe "papers/edit", type: :view do
       assert_select "input[name=?]", "paper[venue]"
 
       assert_select "input[name=?]", "paper[year]"
+
+      assert_select "input[name=?]", "paper[author_ids][]"
     end
   end
 end
